@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -118,18 +119,15 @@
 </head>
 <body class="font-montserrat bg-black text-white min-h-full">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 border-b border-electric-blue">
+    <nav class="fixed top-0 w-full bg-gradient-to-br backdrop-blur-sm z-50 border-b border-electric-blue">
         <div class="container mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-electric-blue rounded-full flex items-center justify-center">
-                        <img src="logohfc.png">
-                    </div>
-                    <span class="font-bebas text-2xl text-electric-blue">HFC 2026</span>
+                    <span class="font-bebas text-2xl text-electric-blue">HEPWETI FUTSAL COMPETITION 2026</span>
                 </div>
                 
                 <div class="hidden md:flex space-x-6">
-                    <button onclick="showSection('home')" class="nav-btn nav-active px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Beranda</button>
+                    <button onclick="showSection ('home')" class="nav-btn nav-active px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Beranda</button>
                     <button onclick="showSection('about')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Tentang</button>
                     <button onclick="showSection('schedule')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Jadwal</button>
                     <button onclick="showSection('registration')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Pendaftaran</button>
@@ -162,26 +160,24 @@
         <div class="relative z-10 container mx-auto px-4 py-20">
             <div class="text-center slide-in">
                 <div class="mb-8">
-                    <div class="inline-block ball-bounce text-6xl mb-4">⚽</div>
+                    <div class="inline-block w-24 h-10 ball-bounce text-6xl mb-4">
+                    <img src="HEPWETI-FUTSAL-COMPETITION.png" alt="HFC Logo" class="mx-auto mb-4"></div>
                 </div>
-                <h1 class="font-bebas text-6xl md:text-8xl text-white mb-4 glow-effect">
+                <h1 class="font-bebas text-6xl md:text-8xl text-white mb-4">
                     HFC 2026
                 </h1>
-                <h2 class="font-bebas text-3xl md:text-5xl text-electric-blue mb-6">
-                    HEPWETI FUTSAL COMPETITION
-                </h2>
-                <p class="text-xl md:text-3xl text-white mb-8 max-w-4xl mx-auto font-bold">
+                <p class="text-lg md:text-xl text-white mb-6 max-w-4xl mx-auto font-semibold">
                     ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIK!" ⚡
                 </p>
-                <p class="text-lg md:text-xl text-yellow-300 mb-6 max-w-4xl mx-auto font-semibold">
-                    🔥 ARENA TERBESAR • KOMPETISI TERGANAS • HADIAH TERBESAR 🔥
+                <p class="text-xl md:text-4xl text-yellow-500 mb-8 max-w-4xl mx-auto font-bold">
+                    🏆 PEREBUTAN PIALA BERGILIR KETUA DPRD DAN BUPATI CIAMIS 🏆
                 </p>
                 <p class="text-lg text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-                    Rasakan sensasi pertandingan futsal paling mendebarkan se-Kabupaten Ciamis! 32 tim terbaik akan bertarung habis-habisan untuk merebut gelar juara. Hanya yang terkuat yang akan bertahan hingga akhir!
+                    Rasakan sensasi pertandingan futsal paling mendebarkan se-Kabupaten Ciamis! 40 tim terbaik akan bertarung habis-habisan untuk merebut gelar juara. Hanya yang terkuat yang akan bertahan hingga akhir!
                 </p>
-                <div class="bg-gradient-to-r from-red-600 to-orange-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400">
+                <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400">
                     <p class="text-white font-bold text-lg">
-                        🏆 TOTAL HADIAH: Rp 14.000.000 + TROFI + SERTIFIKAT 🏆
+                        🔥 TOTAL HADIAH: Rp 14.000.000 + TROFI + SERTIFIKAT 🔥
                     </p>
                 </div>
                 
@@ -189,30 +185,30 @@
                 <div class="mb-12">
                     <h3 class="text-2xl font-bold mb-6">Countdown Menuju Pembukaan</h3>
                     <div class="flex justify-center space-x-4" id="countdown">
-                        <div class="countdown-box">
-                            <div class="text-3xl font-bold" id="days">00</div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="days">00</div>
                             <div class="text-sm">Hari</div>
                         </div>
-                        <div class="countdown-box">
-                            <div class="text-3xl font-bold" id="hours">00</div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="hours">00</div>
                             <div class="text-sm">Jam</div>
                         </div>
-                        <div class="countdown-box">
-                            <div class="text-3xl font-bold" id="minutes">00</div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="minutes">00</div>
                             <div class="text-sm">Menit</div>
                         </div>
-                        <div class="countdown-box">
-                            <div class="text-3xl font-bold" id="seconds">00</div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="seconds">00</div>
                             <div class="text-sm">Detik</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="flex flex-col md:flex-row gap-6 justify-center">
-                    <button onclick="showSection('registration')" class="bg-electric-blue hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 glow-effect">
+                    <button onclick="showSection('registration')" class="text-electric-blue hover:bg-electric-blue hover:text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 glow-effect">
                         🏆 Daftar Sekarang
                     </button>
-                    <button onclick="showSection('schedule')" class="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105">
+                    <button onclick="showSection('schedule')" class=" text-electric-blue hover:bg-electric-blue hover:text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 glow-effect">
                         📅 Lihat Jadwal Pertandingan
                     </button>
                 </div>
@@ -224,7 +220,7 @@
     <section id="about" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
         <div class="container mx-auto px-4 pt-20">
             <div class="slide-in">
-                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-blue mb-12">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
                     TENTANG HFC
                 </h2>
                 
@@ -232,14 +228,28 @@
                     <div>
                         <div class="text-6xl mb-6 text-center"></div>
                         <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                            Hepweti Futsal Competition (HFC) adalah ajang kompetisi futsal tahunan yang diadakan oleh SMK Hepweti Ciamis untuk mengembangkan bakat olahraga futsal pelajar tingkat SMP/MTS.
+                            Hepweti Futsal Competition (HFC) adalah ajang kompetisi futsal tahunan bergengsi 
+                            yang diselenggarakan oleh SMK Hepweti Ciamis. Kegiatan ini menjadi wadah bagi pelajar 
+                            tingkat SMP/MTs untuk menyalurkan minat dan bakat mereka dalam bidang olahraga futsal. 
+                            Melalui turnamen ini, peserta tidak hanya berkompetisi untuk menjadi yang terbaik, 
+                            tetapi juga belajar tentang arti kerja sama tim, sportivitas, dan semangat pantang 
+                            menyerah di lapangan.
                         </p>
                         <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                            Acara ini bertujuan untuk menjalin sportivitas, mempererat persaudaraan, dan menumbuhkan semangat kompetisi sehat di kalangan pelajar.
+                            HFC telah menjadi salah satu agenda rutin yang selalu dinantikan oleh sekolah-sekolah 
+                            di wilayah Ciamis dan sekitarnya. Setiap tahunnya, turnamen ini diikuti oleh puluhan 
+                            tim dengan antusiasme tinggi. Selain menjadi ajang adu kemampuan, HFC juga menjadi 
+                            sarana mempererat tali persaudaraan antar pelajar dan membangun jejaring pertemanan 
+                            yang positif melalui olahraga.
                         </p>
-                    </div>
-                    
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                           Dengan mengusung tema “Kick For Glory”, HFC 2026 diharapkan 
+                           menjadi momentum untuk melahirkan bibit-bibit atlet muda yang 
+                           berprestasi serta membawa semangat baru dalam dunia futsal 
+                           pelajar di Kabupaten Ciamis.
+                        </p>
+                        </div>
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <h3 class="font-bebas text-3xl text-electric-blue mb-6">DETAIL TURNAMEN</h3>
                         <div class="space-y-4">
                             <div class="flex items-center">
@@ -277,34 +287,34 @@
     <section id="schedule" class="hidden-section min-h-screen bg-gradient-to-br from-black to-gray-900 py-20">
         <div class="container mx-auto px-4 pt-20">
             <div class="slide-in">
-                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-blue mb-12">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
                     JADWAL & FORMAT TURNAMEN
                 </h2>
                 
                 <div class="grid md:grid-cols-2 gap-12">
                     <!-- Schedule -->
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <h3 class="font-bebas text-3xl text-electric-blue mb-6 flex items-center">
                             📅 JADWAL PERTANDINGAN
                         </h3>
                         <div class="space-y-6">
-                            <div class="bg-gray-700 rounded-lg p-4">
+                            <div class="bg-gradient-to-r rounded-lg p-4">
                                 <h4 class="font-bold text-xl text-white mb-2">Babak Penyisihan</h4>
-                                <p class="text-electric-blue font-semibold">26–30 Januari 2026</p>
+                                <p class="text-yellow-500 font-semibold">26–30 Januari 2026</p>
                             </div>
-                            <div class="bg-gray-700 rounded-lg p-4">
+                            <div class="bg-gradient-to-r rounded-lg p-4">
                                 <h4 class="font-bold text-xl text-white mb-2">Semifinal</h4>
-                                <p class="text-electric-blue font-semibold">31 Januari 2026</p>
+                                <p class="text-yellow-500 font-semibold">31 Januari 2026</p>
                             </div>
                             <div class="bg-gradient-to-r from-electric-blue to-blue-700 rounded-lg p-4">
                                 <h4 class="font-bold text-xl text-white mb-2">Final & Penutupan</h4>
-                                <p class="text-white font-semibold">1 Februari 2026</p>
+                                <p class="text-yellow-500 font-semibold">1 Februari 2026</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Format -->
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <h3 class="font-bebas text-3xl text-electric-blue mb-6 flex items-center">
                             ⚽ FORMAT PERTANDINGAN
                         </h3>
@@ -312,7 +322,7 @@
                             <div class="flex items-center">
                                 <span class="text-2xl mr-3">🏆</span>
                                 <div>
-                                    <strong>Sistem:</strong> Setengah Kompetisi
+                                    <strong>Sistem:</strong> gugur / knockout system
                                 </div>
                             </div>
                             <div class="flex items-center">
@@ -349,14 +359,14 @@
     <section id="registration" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
         <div class="container mx-auto px-4 pt-20">
             <div class="slide-in">
-                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-blue mb-12">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
                     DAFTARKAN TIM FUTSALMU SEKARANG!
                 </h2>
                 
                 <div class="grid md:grid-cols-3 gap-8 mb-12">
 
                     <!-- Fasilitas -->
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <div class="text-4xl mb-4 text-center">🎁</div>
                         <h3 class="font-bebas text-2xl text-electric-blue mb-4 text-center">HADIAH</h3>
                         <ul class="space-y-2">
@@ -398,7 +408,7 @@
                     </div>
 
                     <!-- Syarat -->
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <div class="text-4xl mb-4 text-center">📋</div>
                         <h3 class="font-bebas text-2xl text-electric-blue mb-4 text-center">SYARAT & KETENTUAN</h3>
                         <ul class="space-y-2">
@@ -434,13 +444,13 @@
     <section id="gallery" class="hidden-section min-h-screen bg-gradient-to-br from-black to-gray-900 py-20">
         <div class="container mx-auto px-4 pt-20">
             <div class="slide-in">
-                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-blue mb-12">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
                     GALERI HFC
                 </h2>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Gallery Items -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white transition-all duration-300 transform hover:scale-105">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
                         <div class="h-48 bg-gradient-to-br from-electric-blue to-blue-700 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="gallery-item">
@@ -453,7 +463,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white transition-all duration-300 transform hover:scale-105">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
                         <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="gallery-item">
@@ -466,7 +476,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white transition-all duration-300 transform hover:scale-105">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
                         <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="gallery-item">
@@ -479,7 +489,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white transition-all duration-300 transform hover:scale-105">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
                         <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="gallery-item">
@@ -492,7 +502,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white transition-all duration-300 transform hover:scale-105">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
                         <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="gallery-item">
@@ -505,7 +515,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white transition-all duration-300 transform hover:scale-105">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
                         <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="gallery-item">
@@ -520,8 +530,8 @@
                 </div>
                 
                 <div class="text-center mt-12">
-                    <p class="text-xl text-gray-300 mb-6">Ikuti media sosial kami untuk update terbaru!</p>
-                    <button onclick="openInstagram()" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    <p class="text-xl text-gray-300 mb-6 ">Ikuti media sosial kami untuk update terbaru!</p>
+                    <button onclick="openInstagram()" class="bg-gradient-to-r from-yellow-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform glow-effect hover:scale-105">
                         📱 @hepwetifutsalcompetition
                     </button>
                 </div>
@@ -533,13 +543,13 @@
     <section id="contact" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
         <div class="container mx-auto px-4 pt-20">
             <div class="slide-in">
-                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-blue mb-12">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
                     HUBUNGI KAMI
                 </h2>
                 
                 <div class="grid md:grid-cols-2 gap-12">
                     <!-- Contact Info -->
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <h3 class="font-bebas text-3xl text-electric-blue mb-6">KONTAK PANITIA</h3>
                         <div class="space-y-6">
                             <div class="flex items-center">
@@ -557,7 +567,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold">WhatsApp</p>
-                                    <p class="text-electric-blue">0812-2163-6632</p>
+                                    <p class="text-electric-white">0812-2163-6632</p>
                                 </div>
                             </div>
                             
@@ -567,7 +577,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold">Instagram</p>
-                                    <p class="text-electric-blue">@hepwetifutsalcompetition</p>
+                                    <p class="text-electric-white">@hepwetifutsalcompetition</p>
                                 </div>
                             </div>
                             
@@ -577,50 +587,50 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold">Email</p>
-                                    <p class="text-electric-blue">hepwetifutsalcup@gmail.com</p>
+                                    <p class="text-electric-white">hepwetifutsalcup@gmail.com</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mt-8 flex flex-col space-y-4">
-                            <button onclick="contactWhatsApp()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <button onclick="contactWhatsApp()" class="bg-gradient-to-r hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform glow-effect hover:scale-105">
                                 💬 Chat WhatsApp
                             </button>
-                            <button onclick="openInstagram()" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <button onclick="openInstagram()" class="bg-gradient-to-r text-white font-bold py-3 px-6 rounded-lg glow-effect transition-all duration-300 transform hover:scale-105">
                                 📱 Follow Instagram
                             </button>
                         </div>
                     </div>
                     
                     <!-- Sponsors -->
-                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
                         <h3 class="font-bebas text-3xl text-electric-blue mb-6">SPONSOR & PARTNER</h3>
                         <div class="grid grid-cols-2 gap-6">
-                            <div class="bg-gray-700 rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
+                            <div class="bg-white glow-effect rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
                                 <div class="gallery-item">
                                     <img src="aice.png" alt=""></div>
                                 <p class="font-semibold">________</p>
-                                <p class="text-sm text-gray-400">Have An AICE Day</p>
+                                <p class="text-sm text-gray-400">Ice Cream Partnership</p>
                             </div>
                             
-                            <div class="bg-gray-700 rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
+                            <div class="bg-white glow-effect rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
                                 <div class="gallery-item">
                                     <img src="5.png" alt=""></div>
                                 <p class="font-semibold">________</p>
-                                <p class="text-sm text-gray-400">XL Axiata</p>
+                                <p class="text-sm text-gray-400">Internet Partnership</p>
                             </div>
                             
-                            <div class="bg-gray-700 rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
+                            <div class="bg-white glow-effect rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
                                 <div class="gallery-item">
                                     <img src="6.png" alt=""></div>
                                 <p class="font-semibold">________</p>
-                                <p class="text-sm text-gray-400">Syafa Water</p>
+                                <p class="text-sm text-gray-400">Water Partnership</p>
                             </div>
                         </div>
                         
                         <div class="mt-8 text-center">
                             <p class="text-gray-400 mb-4">Tertarik menjadi sponsor?</p>
-                            <button onclick="contactWhatsApp()" class="bg-electric-blue hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">
+                            <button onclick="contactWhatsApp()" class="bg-electric-blue hover:bg-blue-700 glow-effect text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">
                                 Hubungi Kami
                             </button>
                         </div>
@@ -734,3 +744,13 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98cc288e5292fdc5',t:'MTc2MDE2MjY0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
+
+<environment_details>
+# VSCode Visible Files
+HFC.html
+
+# VSCode Open Tabs
+websmkhepewticms.html
+HFC.html
+</environment_details>
