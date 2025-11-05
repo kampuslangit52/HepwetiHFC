@@ -1,3 +1,4 @@
+<title>HFC - Hepweti Futsal Competition 2025</title> <script src="https://cdn.tailwindcss.com"></script> <style> body { box-sizing: border-box; }
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
