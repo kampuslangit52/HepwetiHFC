@@ -14,21 +14,21 @@
         .font-bebas { font-family: 'Bebas Neue', cursive; }
         .font-montserrat { font-family: 'Montserrat', sans-serif; }
         
-        .bg-electric-blue { background-color: #0066ff; }
-        .text-electric-blue { color: #0066ff; }
-        .border-electric-blue { border-color: #0066ff; }
+        .bg-electric-blue { background-color: #da5903; }
+        .text-electric-blue { color: #da5903; }
+        .border-electric-blue { border-color: #da5903; }
         
         .stadium-lights {
-            background: radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.3) 0%, transparent 50%),
+            background: radial-gradient(circle at 30% 20%, rgba(0, 48, 119, 0.3) 0%, transparent 50%),
                         radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 50% 80%, rgba(0, 102, 255, 0.2) 0%, transparent 50%);
+                        radial-gradient(circle at 50% 80%, rgba(0, 56, 139, 0.2) 0%, transparent 50%);
         }
         
         .futsal-field {
             background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 102, 255, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 20% 30%, rgba(0, 53, 133, 0.4) 0%, transparent 40%),
                 radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 30%),
-                radial-gradient(circle at 60% 70%, rgba(0, 102, 255, 0.3) 0%, transparent 35%),
+                radial-gradient(circle at 60% 70%, rgba(0, 41, 102, 0.3) 0%, transparent 35%),
                 radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 25%),
                 linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0066ff 100%);
             position: relative;
@@ -46,7 +46,7 @@
                 radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
                 radial-gradient(circle at 75% 75%, rgba(0,102,255,0.2) 1px, transparent 1px),
                 linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.05) 49%, rgba(255,255,255,0.05) 51%, transparent 52%),
-                linear-gradient(-45deg, transparent 48%, rgba(0,102,255,0.1) 49%, rgba(0,102,255,0.1) 51%, transparent 52%);
+                linear-gradient(-45deg, transparent 48%, rgba(0, 52, 129, 0.1) 49%, rgba(0,102,255,0.1) 51%, transparent 52%);
             background-size: 80px 80px, 60px 60px, 100px 100px, 100px 100px;
             animation: backgroundMove 20s linear infinite;
         }
@@ -104,7 +104,7 @@
         }
         
         .nav-active {
-            background-color: #0066ff;
+            background-color: #f11c00;
             color: white;
         }
         
