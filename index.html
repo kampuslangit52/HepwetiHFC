@@ -164,7 +164,7 @@
                     <img src="HEPWETI-FUTSAL-COMPETITION.png" alt="HFC Logo" class="mx-auto mb-4"></div>
                 </div>
                 <h1 class="font-bebas text-6xl md:text-8xl text-white mb-4">
-                    HFC 2026
+                    HFC
                 </h1>
                 <p class="text-lg md:text-xl text-white mb-6 max-w-4xl mx-auto font-semibold">
                     ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIK!" ⚡
