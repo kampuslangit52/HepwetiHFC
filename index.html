@@ -869,7 +869,7 @@
                             </div>
                             <div class="agenda-timeline feature-text">
                                 <h4>Waktu</h4>
-                                <p>15 November 2025, 08.00 - 16.00 WIB di Gedung Serba Guna</p>
+                                <p>24 Januari 2026, 08.00 - 15.00 WIB</p>
                             </div>
                         </div>
                         <div class="feature">
@@ -878,7 +878,7 @@
                             </div>
                             <div class="agenda-timeline feature-text">
                                 <h4>Tempat</h4>
-                                <p>Gedung Serba Guna, Kampus Utama dengan fasilitas lengkap</p>
+                                <p>Kampus SMK Hepweti Ciamis</p>
                             </div>
                         </div>
                         <div class="feature">
