@@ -310,7 +310,7 @@
                     HFC
                 </h1>
                 <p class="text-lg md:text-xl text-white mb-6 max-w-4xl mx-auto font-semibold">
-                    ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIK!" ⚡
+                    ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIC!" ⚡
                 </p>
                 <p class="text-xl md:text-4xl text-yellow-500 mb-8 max-w-4xl mx-auto font-bold">
                     🏆 PEREBUTAN PIALA BERGILIR KETUA DPRD DAN BUPATI CIAMIS 🏆
