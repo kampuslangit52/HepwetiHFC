@@ -115,6 +115,147 @@
         .active-section {
             display: block;
         }
+
+        body {
+            box-sizing: border-box;
+        }
+/*Technical Meeting*/
+        
+        /* Agenda Section */
+        .agenda-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .agenda-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4a90e2;
+        }
+
+        .agenda-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .agenda-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        .agenda-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: #4a90e2;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #4a90e2;
+        }
+
+        .agenda-time {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
+        }
+
+        .agenda-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0d1b3e;
+            margin-bottom: 0.5rem;
+        }
+
+        .agenda-desc {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+/*Technical Meeting*/
+
+                /* About Section2 */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            background-color: var(--primary-light);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="font-montserrat bg-black text-white min-h-full">
@@ -127,12 +268,13 @@
                 </div>
                 
                 <div class="hidden md:flex space-x-6">
-                    <button onclick="showSection ('home')" class="nav-btn nav-active px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Beranda</button>
-                    <button onclick="showSection('about')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Tentang</button>
-                    <button onclick="showSection('schedule')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Jadwal</button>
-                    <button onclick="showSection('registration')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Pendaftaran</button>
-                    <button onclick="showSection('gallery')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Galeri</button>
-                    <button onclick="showSection('contact')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Kontak</button>
+                    <button onclick="showSection ('home')" class="nav-btn nav-active px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Beranda</button>
+                    <button onclick="showSection('about')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Tentang</button>
+                    <button onclick="showSection('schedule')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Jadwal</button>
+                    <button onclick="showSection('registration')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Pendaftaran</button>
+                    <button onclick="showSection('gallery')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Galeri</button>
+                    <button onclick="showSection('contact')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Kontak</button>
+                    <button onclick="showSection('Technical Meeting')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 text-electric-blue hover:bg-electric-blue hover:scale-105 font-bold">Technical Meeting</button>
                 </div>
                 
                 <button id="mobile-menu-btn" class="md:hidden text-white">
@@ -150,6 +292,7 @@
                 <button onclick="showSection('registration')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Pendaftaran</button>
                 <button onclick="showSection('gallery')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Galeri</button>
                 <button onclick="showSection('contact')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Kontak</button>
+                <button onclick="showSection('Technical Meeting')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue font-bold">Technical Meeting</button>
             </div>
         </div>
     </nav>
@@ -334,7 +477,7 @@
                             <div class="flex items-center">
                                 <span class="text-2xl mr-3">👥</span>
                                 <div>
-                                    <strong>Pemain:</strong> 5 inti + 3 cadangan
+                                    <strong>Pemain:</strong> 5 inti + 7 cadangan
                                 </div>
                             </div>
                             <div class="flex items-center">
@@ -640,7 +783,209 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Technical Meeting Section -->
+    <section id="Technical Meeting" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    Technical Meeting
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-br from-electric-blue to-blue-700 rounded-lg p-8 text-center">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6">Persiapan Acara</h3>
+                            <p class="text-gray-400 mb-4">Technical Meeting ini diselenggarakan untuk
+                             mempersiapkan dan mengkoordinasikan seluruh aspek teknis dari acara 
+                             [Hepweti Futsal Competition] yang akan datang. Pertemuan ini bertujuan memastikan 
+                             semua pihak terkait memiliki pemahaman yang sama tentang pelaksanaan acara.</p>   
+                            <p class="text-gray-400 mb-4">Kami mengundang seluruh panitia, peserta,
+                            dan pihak terkait untuk hadir dalam pertemuan penting ini guna menyamakan 
+                            persepsi dan koordinasi teknis pelaksanaan acara.</p>
+                    
+    <!-- About Section2 -->
+    <section id="about2">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang Acara</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+   
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Tujuan</h4>
+                                <p>Koordinasi teknis dan persiapan acara</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Waktu</h4>
+                                <p>15 November 2025, 08.00 - 16.00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Tempat</h4>
+                                <p>Gedung Serba Guna, Kampus Utama</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Peserta</h4>
+                                <p>Panitia, peserta, dan pihak terkait</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    <div class="about-features ">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Tujuan</h4>
+                                <p>Koordinasi teknis dan persiapan acara untuk memastikan kelancaran pelaksanaan</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Waktu</h4>
+                                <p>15 November 2025, 08.00 - 16.00 WIB di Gedung Serba Guna</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Tempat</h4>
+                                <p>Gedung Serba Guna, Kampus Utama dengan fasilitas lengkap</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Peserta</h4>
+                                <p>Seluruh panitia, peserta, dan pihak terkait dalam acara</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+   <div class="agenda-timeline ">
+    <h2 class="section-title font-bebas text-3xl mb-6">Agenda Acara </h2>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      08:30 - 09:00
+     </div>
+     <div class="agenda-title">
+      Registrasi Peserta
+     </div>
+     <div class="agenda-desc">
+      Pendaftaran ulang dan pengambilan materi meeting
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      09:00 - 09:30
+     </div>
+     <div class="agenda-title">
+      Pembukaan &amp; Sambutan
+     </div>
+     <div class="agenda-desc">
+      Sambutan ketua panitia dan penjelasan tujuan technical meeting
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      09:30 - 11:00
+     </div>
+     <div class="agenda-title">
+      Pembahasan Teknis I
+     </div>
+     <div class="agenda-desc">
+      Review timeline acara, pembagian tugas, dan koordinasi antar divisi
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      11:00 - 11:15
+     </div>
+     <div class="agenda-title">
+      Coffee Break
+     </div>
+     <div class="agenda-desc">
+      Istirahat dan networking
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      11:15 - 12:45
+     </div>
+     <div class="agenda-title">
+      Pembahasan Teknis II
+     </div>
+     <div class="agenda-desc">
+      Detail teknis pelaksanaan, kebutuhan logistik, dan contingency plan
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      12:45 - 13:45
+     </div>
+     <div class="agenda-title">
+      Ishoma
+     </div>
+     <div class="agenda-desc">
+      Istirahat, sholat, dan makan siang
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      13:45 - 14:30
+     </div>
+     <div class="agenda-title">
+      Sesi Tanya Jawab
+     </div>
+     <div class="agenda-desc">
+      Diskusi terbuka dan klarifikasi tugas
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      14:30 - 15:00
+     </div>
+     <div class="agenda-title">
+      Penutupan
+     </div>
+     <div class="agenda-desc">
+      Kesimpulan, action items, dan foto bersama
+     </div>
+    </div>
+   </div>
+  </section>
+
     <footer class="bg-black border-t border-electric-blue py-8">
         <div class="container mx-auto px-4 text-center">
             <div class="flex items-center justify-center space-x-3 mb-4">
