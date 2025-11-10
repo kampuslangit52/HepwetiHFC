@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -310,7 +309,7 @@
                     HFC
                 </h1>
                 <p class="text-lg md:text-xl text-white mb-6 max-w-4xl mx-auto font-semibold">
-                    ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIC!" ⚡
+                    ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIK!" ⚡
                 </p>
                 <p class="text-xl md:text-4xl text-yellow-500 mb-8 max-w-4xl mx-auto font-bold">
                     🏆 PEREBUTAN PIALA BERGILIR KETUA DPRD DAN BUPATI CIAMIS 🏆
@@ -416,7 +415,7 @@
                             <div class="flex items-center">
                                 <span class="text-2xl mr-3">⏰</span>
                                 <div>
-                                    <strong>Tanggal:</strong> 26 Januari – 1 Februari 2026
+                                    <strong>Tanggal:</strong> 12 Januari – 17 Februari 2026
                                 </div>
                             </div>
                         </div>
@@ -443,15 +442,15 @@
                         <div class="space-y-6">
                             <div class="bg-gradient-to-r rounded-lg p-4">
                                 <h4 class="font-bold text-xl text-white mb-2">Babak Penyisihan</h4>
-                                <p class="text-yellow-500 font-semibold">26–30 Januari 2026</p>
+                                <p class="text-yellow-500 font-semibold">12–15 Januari 2026</p>
                             </div>
                             <div class="bg-gradient-to-r rounded-lg p-4">
                                 <h4 class="font-bold text-xl text-white mb-2">Semifinal</h4>
-                                <p class="text-yellow-500 font-semibold">31 Januari 2026</p>
+                                <p class="text-yellow-500 font-semibold">16 Januari 2026</p>
                             </div>
                             <div class="bg-gradient-to-r from-electric-blue to-blue-700 rounded-lg p-4">
                                 <h4 class="font-bold text-xl text-white mb-2">Final & Penutupan</h4>
-                                <p class="text-yellow-500 font-semibold">1 Februari 2026</p>
+                                <p class="text-yellow-500 font-semibold">17 Februari 2026</p>
                             </div>
                         </div>
                     </div>
