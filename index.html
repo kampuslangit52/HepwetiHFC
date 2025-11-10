@@ -1042,7 +1042,7 @@
         
         // Countdown timer
         function updateCountdown() {
-            const targetDate = new Date('January 26, 2026 00:00:00').getTime();
+            const targetDate = new Date('January 12, 2026 00:00:00').getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
             
