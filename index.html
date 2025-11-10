@@ -1,1527 +1,1091 @@
-<!doctype html>
-<html lang="id">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Ghani - Portfolio</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <style>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HFC - Hepweti Futsal Competition 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
         body {
             box-sizing: border-box;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .font-bebas { font-family: 'Bebas Neue', cursive; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        .bg-electric-blue { background-color: #da5903; }
+        .text-electric-blue { color: #da5903; }
+        .border-electric-blue { border-color: #da5903; }
+        
+        .stadium-lights {
+            background: radial-gradient(circle at 30% 20%, rgba(0, 48, 119, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 80%, rgba(0, 56, 139, 0.2) 0%, transparent 50%);
         }
-
-        html, body {
-            height: 100%;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0b1120;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(11, 17, 32, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 5%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(249, 217, 73, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #f9d949;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: #f9d949;
-        }
-
-        .nav-links .contact-btn {
-            background: #f9d949;
-            color: #0b1120;
-            padding: 0.6rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-        }
-
-        .nav-links .contact-btn:hover {
-            background: #ffd700;
-            color: #0b1120;
-        }
-
-        /* Sections */
-        section {
-            min-height: 100%;
-            padding: 6rem 5% 4rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 1400px;
-            width: 100%;
-        }
-
-        /* Home Section */
-        .home-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .profile-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-circle {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1a2332 0%, #0b1120 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 60px rgba(249, 217, 73, 0.3);
-            border: 3px solid rgba(249, 217, 73, 0.2);
+        
+        .futsal-field {
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 53, 133, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 30%),
+                radial-gradient(circle at 60% 70%, rgba(0, 41, 102, 0.3) 0%, transparent 35%),
+                radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 25%),
+                linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0066ff 100%);
             position: relative;
             overflow: hidden;
         }
-
-        .profile-circle::before {
+        
+        .futsal-field::before {
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(249, 217, 73, 0.1) 0%, transparent 70%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(0,102,255,0.2) 1px, transparent 1px),
+                linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.05) 49%, rgba(255,255,255,0.05) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(0, 52, 129, 0.1) 49%, rgba(0,102,255,0.1) 51%, transparent 52%);
+            background-size: 80px 80px, 60px 60px, 100px 100px, 100px 100px;
+            animation: backgroundMove 20s linear infinite;
         }
-
-        .profile-placeholder {
-            width: 85%;
-            height: 85%;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2a3a52 0%, #1a2332 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            color: #f9d949;
+        
+        .futsal-field::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at top, rgba(0, 102, 255, 0.1) 0%, transparent 70%),
+                radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
         }
-
-        .home-text h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        
+        @keyframes backgroundMove {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-10px, -10px) rotate(90deg); }
+            50% { transform: translate(10px, -5px) rotate(180deg); }
+            75% { transform: translate(-5px, 10px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
         }
-
-        .home-text h2 {
-            font-size: 1.5rem;
-            color: #f9d949;
-            font-weight: 500;
-            margin-bottom: 2rem;
+        
+        .ball-bounce {
+            animation: bounce 2s infinite;
         }
-
-        .home-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #b8c5d6;
-            margin-bottom: 2.5rem;
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
         }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
         }
-
-        .btn {
-            padding: 0.9rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-            font-size: 1rem;
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
         }
-
-        .btn-primary {
-            background: #f9d949;
-            color: #0b1120;
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        .btn-primary:hover {
-            background: #ffd700;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(249, 217, 73, 0.4);
-        }
-
-        .btn-secondary {
-            border: 2px solid #f9d949;
-            color: #f9d949;
-        }
-
-        .btn-secondary:hover {
-            background: #f9d949;
-            color: #0b1120;
-            transform: translateY(-2px);
-        }
-
-        /* Skills Section */
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
+        
+        .countdown-box {
+            background: linear-gradient(135deg, #0066ff, #004db3);
+            border-radius: 10px;
+            padding: 1rem;
             text-align: center;
-            margin-bottom: 3rem;
-            color: #f9d949;
+            color: white;
+            min-width: 80px;
+        }
+        
+        .nav-active {
+            background-color: #f11c00;
+            color: white;
+        }
+        
+        .hidden-section {
+            display: none;
+        }
+        
+        .active-section {
+            display: block;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+        body {
+            box-sizing: border-box;
+        }
+/*Technical Meeting*/
+        
+        /* Agenda Section */
+        .agenda-timeline {
+            position: relative;
+            padding-left: 2rem;
         }
 
-        .skill-category h3 {
-            font-size: 1.8rem;
+        .agenda-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4a90e2;
+        }
+
+        .agenda-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
             margin-bottom: 2rem;
-            color: #f9d949;
-            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: relative;
+            transition: all 0.3s ease;
         }
 
-        .skill-item {
-            background: rgba(26, 35, 50, 0.5);
-            padding: 1.2rem 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(249, 217, 73, 0.1);
-            transition: all 0.3s;
+        .agenda-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
         }
 
-        .skill-item:hover {
-            background: rgba(26, 35, 50, 0.8);
-            border-color: rgba(249, 217, 73, 0.3);
-            transform: translateX(5px);
+        .agenda-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: #4a90e2;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #4a90e2;
         }
 
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .agenda-time {
+            font-size: 1.3rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
         }
 
-        .stars {
-            color: #f9d949;
+        .agenda-title {
             font-size: 1.2rem;
+            font-weight: 600;
+            color: #0d1b3e;
+            margin-bottom: 0.5rem;
         }
 
-        /* About Section */
+        .agenda-desc {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+/*Technical Meeting*/
+
+                /* About Section2 */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             align-items: center;
         }
 
-        .about-image {
-            display: flex;
-            justify-content: center;
-        }
-
-        .about-circle {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1a2332 0%, #0b1120 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 50px rgba(249, 217, 73, 0.2);
-            border: 3px solid rgba(249, 217, 73, 0.2);
-        }
-
-        .about-placeholder {
-            width: 85%;
-            height: 85%;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2a3a52 0%, #1a2332 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: #f9d949;
-        }
-
-        .about-text h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #f9d949;
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
         }
 
         .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: #b8c5d6;
+            margin-bottom: 20px;
+            color: var(--text-light);
         }
 
-        /* Portfolio Section */
-        .portfolio-grid {
+        .about-features {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .portfolio-item {
-            background: rgba(26, 35, 50, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(249, 217, 73, 0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(249, 217, 73, 0.2);
-            border-color: rgba(249, 217, 73, 0.3);
-        }
-
-        .portfolio-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #2a3a52 0%, #1a2332 100%);
+        .feature {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #f9d949;
+            align-items: flex-start;
+            gap: 15px;
         }
 
-        .portfolio-info {
-            padding: 1.5rem;
-        }
-
-        .portfolio-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #f9d949;
-        }
-
-        .portfolio-info p {
-            color: #b8c5d6;
-            font-size: 0.95rem;
-        }
-
-        /* Experience Section */
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 3rem auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(to bottom, #f9d949, rgba(249, 217, 73, 0.2));
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) {
-            flex-direction: row;
-        }
-
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: rgba(26, 35, 50, 0.5);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(249, 217, 73, 0.1);
-        }
-
-        .timeline-icon {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+        .feature-icon {
+            background-color: var(--primary-light);
+            color: var(--white);
             width: 50px;
             height: 50px;
-            background: #f9d949;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 0 20px rgba(249, 217, 73, 0.4);
+            flex-shrink: 0;
         }
 
-        .timeline-content h3 {
-            color: #f9d949;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content p {
-            color: #b8c5d6;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-content h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #f9d949;
-        }
-
-        .contact-content p {
-            font-size: 1.2rem;
-            color: #b8c5d6;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-item {
-            background: rgba(26, 35, 50, 0.5);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(249, 217, 73, 0.1);
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover {
-            background: rgba(26, 35, 50, 0.8);
-            border-color: rgba(249, 217, 73, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .contact-item-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item h4 {
-            color: #f9d949;
-            margin-bottom: 0.5rem;
+        .feature-text h4 {
             font-size: 1.1rem;
+            margin-bottom: 5px;
         }
 
-        .contact-item p {
-            color: #b8c5d6;
-            font-size: 1rem;
-            margin: 0;
+        .feature-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            width: 60px;
-            height: 60px;
-            background: rgba(249, 217, 73, 0.1);
-            border: 2px solid #f9d949;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: #f9d949;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-link:hover {
-            background: #f9d949;
-            color: #0b1120;
-            transform: translateY(-5px);
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(11, 17, 32, 0.95);
-            padding: 2rem 5%;
-            text-align: center;
-            border-top: 1px solid rgba(249, 217, 73, 0.1);
-        }
-
-        footer p {
-            color: #b8c5d6;
-            font-size: 0.95rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .home-content, .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .profile-circle, .about-circle {
-                width: 300px;
-                height: 300px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                flex-direction: row !important;
-            }
-
-            .timeline-content {
-                width: calc(100% - 80px);
-                margin-left: 80px;
-            }
-
-            .timeline-icon {
-                left: 30px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-
-            .home-text h1 {
-                font-size: 2rem;
-            }
-
-            .home-text h2 {
-                font-size: 1.2rem;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-        }
-
-        /* Advanced Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 60px rgba(249, 217, 73, 0.3); }
-            50% { box-shadow: 0 0 80px rgba(249, 217, 73, 0.6); }
-        }
-
-        @keyframes slideInLeft {
-            0% { transform: translateX(-100px); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes slideInRight {
-            0% { transform: translateX(100px); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes scaleIn {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink {
-            0%, 50% { border-color: transparent; }
-            51%, 100% { border-color: #f9d949; }
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
-        }
-
-        /* Floating animation for profile image */
-        .profile-circle {
-            animation: float 6s ease-in-out infinite, glow 4s ease-in-out infinite;
-        }
-
-        .about-circle {
-            animation: float 8s ease-in-out infinite;
-        }
-
-        /* Typewriter effect for main title */
-        .typewriter {
+        .about-image {
+            border-radius: 10px;
             overflow: hidden;
-            border-right: 3px solid #f9d949;
-            white-space: nowrap;
-            animation: typewriter 3s steps(40) 1s forwards, blink 1s infinite;
-            width: 0;
+            box-shadow: var(--shadow);
         }
 
-        /* Gradient background animation */
-        body {
-            background: linear-gradient(-45deg, #0b1120, #1a2332, #0f1a2e, #162033);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-
-        /* Sparkle effects */
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #f9d949;
-            border-radius: 50%;
-            animation: sparkle 2s infinite;
-        }
-
-        .sparkle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .sparkle:nth-child(2) { top: 80%; left: 20%; animation-delay: 0.5s; }
-        .sparkle:nth-child(3) { top: 40%; right: 15%; animation-delay: 1s; }
-        .sparkle:nth-child(4) { bottom: 30%; right: 25%; animation-delay: 1.5s; }
-
-        /* Enhanced fade-in animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .slide-left {
-            opacity: 0;
-            animation: slideInLeft 1s ease-out forwards;
-        }
-
-        .slide-right {
-            opacity: 0;
-            animation: slideInRight 1s ease-out forwards;
-        }
-
-        .scale-in {
-            opacity: 0;
-            animation: scaleIn 0.8s ease-out forwards;
-        }
-
-        /* Hover animations */
-        .skill-item {
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .skill-item:hover {
-            background: rgba(26, 35, 50, 0.8);
-            border-color: rgba(249, 217, 73, 0.3);
-            transform: translateX(10px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(249, 217, 73, 0.2);
-        }
-
-        .portfolio-item {
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(249, 217, 73, 0.3);
-            border-color: rgba(249, 217, 73, 0.5);
-        }
-
-        .portfolio-item:hover .portfolio-image {
-            animation: pulse 1s ease-in-out infinite;
-        }
-
-        /* Button animations */
-        .btn {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .about-image img {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
+            height: auto;
+            display: block;
+            transition: var(--transition);
         }
 
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary:hover {
-            background: #ffd700;
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(249, 217, 73, 0.5);
-        }
-
-        .btn-secondary:hover {
-            background: #f9d949;
-            color: #0b1120;
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(249, 217, 73, 0.3);
-        }
-
-        /* Navigation animations */
-        nav {
-            transition: all 0.3s ease;
-        }
-
-        .nav-scrolled {
-            background: rgba(11, 17, 32, 0.98);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 2px 20px rgba(249, 217, 73, 0.1);
-        }
-
-        .nav-links a {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #f9d949;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Timeline animations */
-        .timeline-item {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-
-        .timeline-icon {
-            transition: all 0.3s ease;
-        }
-
-        .timeline-icon:hover {
-            transform: translateX(-50%) scale(1.2);
-            box-shadow: 0 0 30px rgba(249, 217, 73, 0.6);
-        }
-
-        /* Contact item animations */
-        .contact-item {
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .contact-item:hover {
-            background: rgba(26, 35, 50, 0.9);
-            border-color: rgba(249, 217, 73, 0.5);
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(249, 217, 73, 0.2);
-        }
-
-        /* Social links animations */
-        .social-link {
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .social-link:hover {
-            background: #f9d949;
-            color: #0b1120;
-            transform: translateY(-8px) rotate(360deg) scale(1.1);
-            box-shadow: 0 10px 25px rgba(249, 217, 73, 0.4);
-        }
-
-        /* Loading animation */
-        .loading-dots {
-            display: inline-block;
-        }
-
-        .loading-dots::after {
-            content: '';
-            animation: dots 2s infinite;
-        }
-
-        @keyframes dots {
-            0%, 20% { content: ''; }
-            40% { content: '.'; }
-            60% { content: '..'; }
-            80%, 100% { content: '...'; }
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: linear-gradient(90deg, #f9d949, #ffd700);
-            z-index: 9999;
-            transition: width 0.3s ease;
-        }
-
-        /* Particle effect */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(249, 217, 73, 0.3);
-            border-radius: 50%;
-            animation: particleFloat 20s infinite linear;
-        }
-
-        @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) translateX(0px);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px);
-                opacity: 0;
-            }
+        .about-image:hover img {
+            transform: scale(1.05);
         }
     </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body><!-- Scroll Progress Indicator -->
-  <div class="scroll-indicator"></div><!-- Particle Background -->
-  <div class="particles" id="particles"></div><!-- Navigation -->
-  <nav id="navbar">
-   <div class="nav-container">
-    <div class="logo">
-     Dul
-    </div>
-    <ul class="nav-links">
-     <li><a href="#home">Home</a></li>
-     <li><a href="#skills">Skills</a></li>
-     <li><a href="#portfolio">Portfolio</a></li>
-     <li><a href="#about">About</a></li>
-     <li><a href="#experience">Experience</a></li>
-     <li><a href="#contact" class="contact-btn">Contact</a></li>
-    </ul>
-   </div>
-  </nav><!-- Home Section -->
-  <section id="home">
-   <div class="container">
-    <div class="home-content fade-in">
-     <div class="profile-image">
-      <div class="profile-circle">
-       <div class="sparkle"></div>
-       <div class="sparkle"></div>
-       <div class="sparkle"></div>
-       <div class="sparkle"></div>
-       <div class="profile-placeholder">
-        👨‍💻
-       </div>
-      </div>
-     </div>
-     <div class="home-text">
-      <h1 id="main-title" class="typewriter">Hello world, I'm Abdul Ghani 👋</h1>
-      <h2 id="subtitle" class="slide-right">Graphic Designer | Web Developer | Educator</h2>
-      <p id="intro-text" class="fade-in">Hi, I'm Abdul Ghani — a creative designer, teacher, and freelancer passionate about digital creation and education. I specialize in graphic design, web development, and content creation for both education and digital marketing. Let's collaborate to turn creative ideas into impactful visual experiences!</p>
-      <div class="cta-buttons scale-in"><a href="#portfolio" class="btn btn-primary">View Portfolio</a> <a href="#contact" class="btn btn-secondary">Contact Me</a>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- Skills Section -->
-  <section id="skills">
-   <div class="container">
-    <h2 class="section-title fade-in">Skills</h2>
-    <div class="skills-grid">
-     <div class="skill-category fade-in">
-      <h3>Design &amp; Development</h3>
-      <div class="skill-item">
-       <div class="skill-name"><span>Canva</span> <span class="stars">⭐⭐⭐⭐☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>Photoshop</span> <span class="stars">⭐⭐⭐☆☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>Capcup</span> <span class="stars">⭐⭐⭐☆☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>HTML</span> <span class="stars">⭐⭐⭐⭐☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>CSS</span> <span class="stars">⭐⭐⭐⭐☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>JavaScript</span> <span class="stars">⭐⭐⭐☆☆</span>
-       </div>
-      </div>
-     </div>
-     <div class="skill-category fade-in">
-      <h3>Digital &amp; Marketing</h3>
-      <div class="skill-item">
-       <div class="skill-name"><span>Social Media Content</span> <span class="stars">⭐⭐⭐⭐☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>Video Editing</span> <span class="stars">⭐⭐⭐⭐☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>Google Ads</span> <span class="stars">⭐⭐⭐☆☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>TikTok Ads</span> <span class="stars">⭐⭐⭐☆☆</span>
-       </div>
-      </div>
-      <div class="skill-item">
-       <div class="skill-name"><span>Data Entry &amp; Administration</span> <span class="stars">⭐⭐⭐⭐⭐</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- About Section -->
-  <section id="about">
-   <div class="container">
-    <div class="about-content fade-in">
-     <div class="about-image">
-      <div class="about-circle">
-       <div class="about-placeholder">
-        🎓
-       </div>
-      </div>
-     </div>
-     <div class="about-text">
-      <h2>About Me</h2>
-      <p id="about-text">Saya Abdul Ghani, lulusan Teknik Komputer dan Jaringan SMK Hepweti Ciamis, serta aktif sebagai guru SMK jurusan Pemasaran dan Akuntansi. Saya juga seorang desainer grafis dan freelancer yang berfokus pada pengembangan media digital, website, dan sistem administrasi. Dengan pengalaman di bidang desain dan teknologi, saya berkomitmen untuk terus berkarya dan memberikan solusi kreatif dalam dunia digital.</p>
-     </div>
-    </div>
-   </div>
-  </section><!-- Portfolio Section -->
-  <section id="portfolio">
-   <div class="container">
-    <h2 class="section-title fade-in">My Works</h2>
-    <div class="portfolio-grid">
-     <div class="portfolio-item fade-in">
-      <div class="portfolio-image">
-       🌐
-      </div>
-      <div class="portfolio-info">
-       <h3>Website Development</h3>
-       <p>www.bimastoree.id - E-commerce platform</p>
-      </div>
-     </div>
-     <div class="portfolio-item fade-in">
-      <div class="portfolio-image">
-       🎨
-      </div>
-      <div class="portfolio-info">
-       <h3>School Promotion Design</h3>
-       <p>Creative promotional materials for educational institutions</p>
-      </div>
-     </div>
-     <div class="portfolio-item fade-in">
-      <div class="portfolio-image">
-       🎬
-      </div>
-      <div class="portfolio-info">
-       <h3>Educational Videos</h3>
-       <p>Video pembelajaran UKIN PPG 2025</p>
-      </div>
-     </div>
-     <div class="portfolio-item fade-in">
-      <div class="portfolio-image">
-       📱
-      </div>
-      <div class="portfolio-info">
-       <h3>Social Media Content</h3>
-       <p>Banner and content for social media marketing</p>
-      </div>
-     </div>
-     <div class="portfolio-item fade-in">
-      <div class="portfolio-image">
-       💼
-      </div>
-      <div class="portfolio-info">
-       <h3>Brand Identity</h3>
-       <p>Logo design and branding materials</p>
-      </div>
-     </div>
-     <div class="portfolio-item fade-in">
-      <div class="portfolio-image">
-       📊
-      </div>
-      <div class="portfolio-info">
-       <h3>Digital Marketing</h3>
-       <p>Google Ads and TikTok Ads campaigns</p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- Experience Section -->
-  <section id="experience">
-   <div class="container">
-    <h2 class="section-title fade-in">Experience</h2>
-    <div class="timeline">
-     <div class="timeline-item fade-in">
-      <div class="timeline-content">
-       <h3>💼 Data Entry</h3>
-       <p>PKBM INSAN MADANI - Managing administrative data and documentation</p>
-      </div>
-      <div class="timeline-icon">
-       💼
-      </div>
-     </div>
-     <div class="timeline-item fade-in">
-      <div class="timeline-content">
-       <h3>🎬 Video Creator</h3>
-       <p>UKIN PPG 2025 - Creating educational video content</p>
-      </div>
-      <div class="timeline-icon">
-       🎬
-      </div>
-     </div>
-     <div class="timeline-item fade-in">
-      <div class="timeline-content">
-       <h3>🌐 Web Developer</h3>
-       <p>Bimastoree.id - Developing and maintaining e-commerce platform</p>
-      </div>
-      <div class="timeline-icon">
-       🌐
-      </div>
-     </div>
-     <div class="timeline-item fade-in">
-      <div class="timeline-content">
-       <h3>🎨 Graphic Designer</h3>
-       <p>Freelance Project - Creating visual designs for various clients</p>
-      </div>
-      <div class="timeline-icon">
-       🎨
-      </div>
-     </div>
-     <div class="timeline-item fade-in">
-      <div class="timeline-content">
-       <h3>🧑‍🏫 Teacher</h3>
-       <p>SMK Jurusan Pemasaran - Teaching marketing and accounting subjects</p>
-      </div>
-      <div class="timeline-icon">
-       🧑‍🏫
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- Contact Section -->
-  <section id="contact">
-   <div class="container">
-    <div class="contact-content fade-in">
-     <h2>Let's Connect</h2>
-     <p id="contact-intro">I'm open for freelance projects, collaborations, or creative partnerships. Don't hesitate to reach out!</p>
-     <div class="contact-info">
-      <div class="contact-item">
-       <div class="contact-item-icon">
-        📧
-       </div>
-       <h4>Email</h4>
-       <p id="email">abdulghani.creative@gmail.com</p>
-      </div>
-      <div class="contact-item">
-       <div class="contact-item-icon">
-        📞
-       </div>
-       <h4>Phone</h4>
-       <p id="phone">0812-3456-7890</p>
-      </div>
-      <div class="contact-item">
-       <div class="contact-item-icon">
-        📸
-       </div>
-       <h4>Instagram</h4>
-       <p id="instagram">@abdulghani.design</p>
-      </div>
-      <div class="contact-item">
-       <div class="contact-item-icon">
-        🌐
-       </div>
-       <h4>Website</h4>
-       <p id="website">www.bimastoree.id</p>
-      </div>
-     </div>
-     <div class="social-links"><a href="#" class="social-link" target="_blank" rel="noopener noreferrer">📧</a> <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">📸</a> <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">🌐</a>
-     </div>
-    </div>
-   </div>
-  </section><!-- Footer -->
-  <footer>
-   <p>© 2025 Abdul Ghani | Designed with visual studio code</p>
-  </footer>
-  <script>
-        const defaultConfig = {
-            background_color: '#0b1120',
-            accent_color: '#f9d949',
-            text_color: '#ffffff',
-            secondary_text_color: '#b8c5d6',
-            surface_color: '#1a2332',
-            font_family: 'Poppins',
-            font_size: 16,
-            main_title: "Hello world, I'm Abdul Ghani 👋",
-            subtitle: "Graphic Designer | Web Developer | Educator",
-            intro_text: "Hi, I'm Abdul Ghani — a creative designer, teacher, and freelancer passionate about digital creation and education. I specialize in graphic design, web development, and content creation for both education and digital marketing. Let's collaborate to turn creative ideas into impactful visual experiences!",
-            about_text: "Saya Abdul Ghani, lulusan Teknik Komputer dan Jaringan SMK Negeri 2 Ciamis, serta aktif sebagai guru SMK jurusan Pemasaran dan Akuntansi. Saya juga seorang desainer grafis dan freelancer yang berfokus pada pengembangan media digital, website, dan sistem administrasi. Dengan pengalaman di bidang desain dan teknologi, saya berkomitmen untuk terus berkarya dan memberikan solusi kreatif dalam dunia digital.",
-            contact_intro: "I'm open for freelance projects, collaborations, or creative partnerships. Don't hesitate to reach out!",
-            email: "abdulghani.creative@gmail.com",
-            phone: "0812-3456-7890",
-            instagram: "@abdulghani.design",
-            website: "www.bimastoree.id"
-        };
-
-        async function onConfigChange(config) {
-            const customFont = config.font_family || defaultConfig.font_family;
-            const baseSize = config.font_size || defaultConfig.font_size;
-            const baseFontStack = 'sans-serif';
+</head>
+<body class="font-montserrat bg-black text-white min-h-full">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gradient-to-br backdrop-blur-sm z-50 border-b border-electric-blue">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span class="font-bebas text-2xl text-electric-blue">HEPWETI FUTSAL COMPETITION 2026</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <button onclick="showSection ('home')" class="nav-btn nav-active px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Beranda</button>
+                    <button onclick="showSection('about')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Tentang</button>
+                    <button onclick="showSection('schedule')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Jadwal</button>
+                    <button onclick="showSection('registration')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Pendaftaran</button>
+                    <button onclick="showSection('gallery')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Galeri</button>
+                    <button onclick="showSection('contact')" class="nav-btn px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue hover:scale-105">Kontak</button>
+                    <button onclick="showSection('Technical Meeting')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 text-electric-blue hover:bg-electric-blue hover:scale-105 font-bold">Technical Meeting</button>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
             
-            document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
-            document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
-            document.body.style.color = config.text_color || defaultConfig.text_color;
-            
-            const accentColor = config.accent_color || defaultConfig.accent_color;
-            const surfaceColor = config.surface_color || defaultConfig.surface_color;
-            const secondaryTextColor = config.secondary_text_color || defaultConfig.secondary_text_color;
-            
-            document.querySelectorAll('.section-title, .logo, h2, h3, .stars, .contact-item h4, .timeline-content h3, .portfolio-info h3').forEach(el => {
-                el.style.color = accentColor;
-            });
-            
-            document.querySelectorAll('.btn-primary, .contact-btn, .timeline-icon').forEach(el => {
-                el.style.backgroundColor = accentColor;
-            });
-            
-            document.querySelectorAll('.btn-secondary, .social-link').forEach(el => {
-                el.style.borderColor = accentColor;
-                el.style.color = accentColor;
-            });
-            
-            document.querySelectorAll('p, .about-text p, .contact-item p, .timeline-content p, .portfolio-info p').forEach(el => {
-                el.style.color = secondaryTextColor;
-            });
-            
-            document.querySelectorAll('.skill-item, .portfolio-item, .contact-item, .timeline-content').forEach(el => {
-                el.style.backgroundColor = `${surfaceColor}80`;
-            });
-            
-            document.getElementById('main-title').textContent = config.main_title || defaultConfig.main_title;
-            document.getElementById('subtitle').textContent = config.subtitle || defaultConfig.subtitle;
-            document.getElementById('intro-text').textContent = config.intro_text || defaultConfig.intro_text;
-            document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
-            document.getElementById('contact-intro').textContent = config.contact_intro || defaultConfig.contact_intro;
-            document.getElementById('email').textContent = config.email || defaultConfig.email;
-            document.getElementById('phone').textContent = config.phone || defaultConfig.phone;
-            document.getElementById('instagram').textContent = config.instagram || defaultConfig.instagram;
-            document.getElementById('website').textContent = config.website || defaultConfig.website;
-            
-            document.querySelector('.home-text h1').style.fontSize = `${baseSize * 1.875}px`;
-            document.querySelector('.home-text h2').style.fontSize = `${baseSize * 0.9375}px`;
-            document.querySelectorAll('.home-text p, .about-text p').forEach(el => {
-                el.style.fontSize = `${baseSize * 0.6875}px`;
-            });
-            document.querySelectorAll('.section-title').forEach(el => {
-                el.style.fontSize = `${baseSize * 1.5625}px`;
-            });
-        }
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <button onclick="showSection('home')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Beranda</button>
+                <button onclick="showSection('about')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Tentang</button>
+                <button onclick="showSection('schedule')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Jadwal</button>
+                <button onclick="showSection('registration')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Pendaftaran</button>
+                <button onclick="showSection('gallery')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Galeri</button>
+                <button onclick="showSection('contact')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue">Kontak</button>
+                <button onclick="showSection('Technical Meeting')" class="nav-btn-mobile block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 hover:bg-electric-blue font-bold">Technical Meeting</button>
+            </div>
+        </div>
+    </nav>
 
-        if (window.elementSdk) {
-            window.elementSdk.init({
-                defaultConfig,
-                onConfigChange,
-                mapToCapabilities: (config) => ({
-                    recolorables: [
-                        {
-                            get: () => config.background_color || defaultConfig.background_color,
-                            set: (value) => {
-                                config.background_color = value;
-                                window.elementSdk.setConfig({ background_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.surface_color || defaultConfig.surface_color,
-                            set: (value) => {
-                                config.surface_color = value;
-                                window.elementSdk.setConfig({ surface_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.text_color || defaultConfig.text_color,
-                            set: (value) => {
-                                config.text_color = value;
-                                window.elementSdk.setConfig({ text_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.accent_color || defaultConfig.accent_color,
-                            set: (value) => {
-                                config.accent_color = value;
-                                window.elementSdk.setConfig({ accent_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.secondary_text_color || defaultConfig.secondary_text_color,
-                            set: (value) => {
-                                config.secondary_text_color = value;
-                                window.elementSdk.setConfig({ secondary_text_color: value });
-                            }
-                        }
-                    ],
-                    borderables: [],
-                    fontEditable: {
-                        get: () => config.font_family || defaultConfig.font_family,
-                        set: (value) => {
-                            config.font_family = value;
-                            window.elementSdk.setConfig({ font_family: value });
-                        }
-                    },
-                    fontSizeable: {
-                        get: () => config.font_size || defaultConfig.font_size,
-                        set: (value) => {
-                            config.font_size = value;
-                            window.elementSdk.setConfig({ font_size: value });
-                        }
-                    }
-                }),
-                mapToEditPanelValues: (config) => new Map([
-                    ["main_title", config.main_title || defaultConfig.main_title],
-                    ["subtitle", config.subtitle || defaultConfig.subtitle],
-                    ["intro_text", config.intro_text || defaultConfig.intro_text],
-                    ["about_text", config.about_text || defaultConfig.about_text],
-                    ["contact_intro", config.contact_intro || defaultConfig.contact_intro],
-                    ["email", config.email || defaultConfig.email],
-                    ["phone", config.phone || defaultConfig.phone],
-                    ["instagram", config.instagram || defaultConfig.instagram],
-                    ["website", config.website || defaultConfig.website]
-                ])
-            });
-        }
+    <!-- Home Section -->
+    <section id="home" class="active-section min-h-screen futsal-field stadium-lights relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 container mx-auto px-4 py-20">
+            <div class="text-center slide-in">
+                <div class="mb-8">
+                    <div class="inline-block w-24 h-10 ball-bounce text-6xl mb-4">
+                    <img src="HEPWETI-FUTSAL-COMPETITION.png" alt="HFC Logo" class="mx-auto mb-4"></div>
+                </div>
+                <h1 class="font-bebas text-6xl md:text-8xl text-white mb-4">
+                    HFC
+                </h1>
+                <p class="text-lg md:text-xl text-white mb-6 max-w-4xl mx-auto font-semibold">
+                    ⚡ "BERSIAPLAH UNTUK PERTEMPURAN EPIK!" ⚡
+                </p>
+                <p class="text-xl md:text-4xl text-yellow-500 mb-8 max-w-4xl mx-auto font-bold">
+                    🏆 PEREBUTAN PIALA BERGILIR KETUA DPRD DAN BUPATI CIAMIS 🏆
+                </p>
+                <p class="text-lg text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
+                    Rasakan sensasi pertandingan futsal paling mendebarkan se-Kabupaten Ciamis! 40 tim terbaik akan bertarung habis-habisan untuk merebut gelar juara. Hanya yang terkuat yang akan bertahan hingga akhir!
+                </p>
+                <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400">
+                    <p class="text-white font-bold text-lg">
+                        🔥 TOTAL HADIAH: Rp 14.000.000 + TROFI + SERTIFIKAT 🔥
+                    </p>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-6">Countdown Menuju Pembukaan</h3>
+                    <div class="flex justify-center space-x-4" id="countdown">
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="days">00</div>
+                            <div class="text-sm">Hari</div>
+                        </div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="hours">00</div>
+                            <div class="text-sm">Jam</div>
+                        </div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="minutes">00</div>
+                            <div class="text-sm">Menit</div>
+                        </div>
+                        <div class="text-white font-bold text-lg">
+                            <div class="bg-gradient-to-r from-red-600 to-BROWN-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto border-2 border-yellow-400 text-3xl font-bold" id="seconds">00</div>
+                            <div class="text-sm">Detik</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <button onclick="showSection('registration')" class="text-electric-blue hover:bg-electric-blue hover:text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 glow-effect">
+                        🏆 Daftar Sekarang
+                    </button>
+                    <button onclick="showSection('schedule')" class=" text-electric-blue hover:bg-electric-blue hover:text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 glow-effect">
+                        📅 Lihat Jadwal Pertandingan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
+    <!-- About Section -->
+    <section id="about" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    TENTANG HFC
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="text-6xl mb-6 text-center"></div>
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            Hepweti Futsal Competition (HFC) adalah ajang kompetisi futsal tahunan bergengsi 
+                            yang diselenggarakan oleh SMK Hepweti Ciamis. Kegiatan ini menjadi wadah bagi pelajar 
+                            tingkat SMP/MTs untuk menyalurkan minat dan bakat mereka dalam bidang olahraga futsal. 
+                            Melalui turnamen ini, peserta tidak hanya berkompetisi untuk menjadi yang terbaik, 
+                            tetapi juga belajar tentang arti kerja sama tim, sportivitas, dan semangat pantang 
+                            menyerah di lapangan.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            HFC telah menjadi salah satu agenda rutin yang selalu dinantikan oleh sekolah-sekolah 
+                            di wilayah Ciamis dan sekitarnya. Setiap tahunnya, turnamen ini diikuti oleh puluhan 
+                            tim dengan antusiasme tinggi. Selain menjadi ajang adu kemampuan, HFC juga menjadi 
+                            sarana mempererat tali persaudaraan antar pelajar dan membangun jejaring pertemanan 
+                            yang positif melalui olahraga.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                           Dengan mengusung tema “Kick For Glory”, HFC 2026 diharapkan 
+                           menjadi momentum untuk melahirkan bibit-bibit atlet muda yang 
+                           berprestasi serta membawa semangat baru dalam dunia futsal 
+                           pelajar di Kabupaten Ciamis.
+                        </p>
+                        </div>
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6">DETAIL TURNAMEN</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">📅</span>
+                                <div>
+                                    <strong>Tahun:</strong> 2026
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🎯</span>
+                                <div>
+                                    <strong>Tema:</strong> "Kick For Glory"
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">📍</span>
+                                <div>
+                                    <strong>Lokasi:</strong> Gelanggang Galuh Taruna (GGT) Ciamis
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">⏰</span>
+                                <div>
+                                    <strong>Tanggal:</strong> 12 Januari – 18 Januari 2026
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Scroll progress indicator
-        function updateScrollProgress() {
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            document.querySelector('.scroll-indicator').style.width = scrollPercent + '%';
-        }
-
-        // Navigation scroll effect
-        function handleNavScroll() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('nav-scrolled');
-            } else {
-                navbar.classList.remove('nav-scrolled');
-            }
-        }
-
-        // Enhanced fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100); // Stagger animation
-                }
-            });
-        }, observerOptions);
-
-        // Timeline items observer
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 200);
-                }
-            });
-        }, observerOptions);
-
-        // Initialize animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Create particles
-            createParticles();
-
-            // Observe elements for animations
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            document.querySelectorAll('.timeline-item').forEach(el => {
-                timelineObserver.observe(el);
-            });
-
-            // Trigger initial animations
-            setTimeout(() => {
-                document.querySelector('.slide-right').style.animation = 'slideInRight 1s ease-out forwards';
-            }, 2000);
-
-            setTimeout(() => {
-                document.querySelector('.scale-in').style.animation = 'scaleIn 0.8s ease-out forwards';
-            }, 3500);
-
-            // Add scroll event listeners
-            window.addEventListener('scroll', () => {
-                updateScrollProgress();
-                handleNavScroll();
-            });
-
-            // Add mouse move parallax effect
-            document.addEventListener('mousemove', (e) => {
-                const mouseX = e.clientX / window.innerWidth;
-                const mouseY = e.clientY / window.innerHeight;
-
-                document.querySelectorAll('.profile-circle, .about-circle').forEach(circle => {
-                    const rect = circle.getBoundingClientRect();
-                    const centerX = rect.left + rect.width / 2;
-                    const centerY = rect.top + rect.height / 2;
+    <!-- Schedule Section -->
+    <section id="schedule" class="hidden-section min-h-screen bg-gradient-to-br from-black to-gray-900 py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    JADWAL & FORMAT TURNAMEN
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Schedule -->
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6 flex items-center">
+                            📅 JADWAL PERTANDINGAN
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r rounded-lg p-4">
+                                <h4 class="font-bold text-xl text-white mb-2">Babak Penyisihan</h4>
+                                <p class="text-yellow-500 font-semibold">12–16 Januari 2026</p>
+                            </div>
+                            <div class="bg-gradient-to-r rounded-lg p-4">
+                                <h4 class="font-bold text-xl text-white mb-2">Semifinal</h4>
+                                <p class="text-yellow-500 font-semibold">17 Januari 2026</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-electric-blue to-blue-700 rounded-lg p-4">
+                                <h4 class="font-bold text-xl text-white mb-2">Final & Penutupan</h4>
+                                <p class="text-yellow-500 font-semibold">18 Februari 2026</p>
+                            </div>
+                        </div>
+                    </div>
                     
-                    if (Math.abs(e.clientX - centerX) < 300 && Math.abs(e.clientY - centerY) < 300) {
-                        const moveX = (mouseX - 0.5) * 20;
-                        const moveY = (mouseY - 0.5) * 20;
-                        circle.style.transform = `translate(${moveX}px, ${moveY}px)`;
-                    }
-                });
-            });
+                    <!-- Format -->
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6 flex items-center">
+                            ⚽ FORMAT PERTANDINGAN
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">🏆</span>
+                                <div>
+                                    <strong>Sistem:</strong> gugur / knockout system
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">⏱️</span>
+                                <div>
+                                    <strong>Durasi:</strong> 2 x 10 menit
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">👥</span>
+                                <div>
+                                    <strong>Pemain:</strong> 5 inti + 7 cadangan
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3">📋</span>
+                                <div>
+                                    <strong>Peraturan:</strong> Standar FFI
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 text-center">
+                            <div class="text-6xl mb-4">🥇</div>
+                            <p class="text-lg text-gray-300">Siap bertanding dengan sportivitas tinggi!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Add typing sound effect simulation
-            const typewriterElement = document.querySelector('.typewriter');
-            if (typewriterElement) {
-                setTimeout(() => {
-                    typewriterElement.style.borderRight = '3px solid transparent';
-                    setTimeout(() => {
-                        typewriterElement.style.borderRight = '3px solid #f9d949';
-                        typewriterElement.style.animation = 'blink 1s infinite';
-                    }, 3000);
-                }, 4000);
-            }
-        });
-
-        // Smooth scroll for navigation links with offset
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add click ripple effect to buttons
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
+    <!-- Registration Section -->
+    <section id="registration" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    DAFTARKAN TIM FUTSALMU SEKARANG!
+                </h2>
                 
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.classList.add('ripple');
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
 
-        // Add CSS for ripple effect
-        const rippleStyle = document.createElement('style');
-        rippleStyle.textContent = `
-            .btn {
-                position: relative;
-                overflow: hidden;
+                    <!-- Fasilitas -->
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <div class="text-4xl mb-4 text-center">🎁</div>
+                        <h3 class="font-bebas text-2xl text-electric-blue mb-4 text-center">HADIAH</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Sertifikat
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Uang Pembinaan
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Medali & trofi juara 1, 2, 3
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Best Player
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Top Score
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Best Supporter
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Biaya -->
+                    <div class="bg-gradient-to-br from-electric-blue to-blue-700 rounded-lg p-8 text-center">
+                        <div class="text-4xl mb-4">💰</div>
+                        <h3 class="font-bebas text-2xl mb-4">BIAYA PENDAFTARAN</h3>
+                        <div class="text-3xl font-bold">Rp300.000</div>
+                        <div class="text-lg">/tim</div>
+                        <div class="text-3xl font-bold">Rp500.000</div>
+                        <div class="text-lg">/2 tim</div>
+                    </div>
+
+                    <!-- Syarat -->
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <div class="text-4xl mb-4 text-center">📋</div>
+                        <h3 class="font-bebas text-2xl text-electric-blue mb-4 text-center">SYARAT & KETENTUAN</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-electric-blue mr-2">•</span>
+                                Peserta pelajar aktif SMP/MTS
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-electric-blue mr-2">•</span>
+                                Satu Tim Maksimal 12 Orang (5 Pemain + 7 Cadangan)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-electric-blue mr-2">•</span>
+                                Bawa Dokumen Persyaratan saat registrasi
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="font-bebas text-3xl text-white mb-8">DAFTAR SEKARANG!</h3>
+                    <div class="flex justify-center">
+                        <button onclick="contactWhatsApp()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                            📱 WhatsApp Panitia
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="hidden-section min-h-screen bg-gradient-to-br from-black to-gray-900 py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    GALERI HFC
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gallery Items -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-electric-blue to-blue-700 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="gallery-item">
+                                    <img src="4366.png" alt=""></div>
+                                <p class="font-semibold"></p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-300">Momen seru pertandingan HFC 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="gallery-item">
+                                    <img src="IMG_9597.png" alt=""></div>
+                                <p class="font-semibold"></p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-300">Penyerahan Trofi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="gallery-item">
+                                    <img src="IMG_20251103_14393708.jpeg" alt=""></div>
+                                <p class="font-semibold"></p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-300">Dukungan luar biasa dari supporter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="gallery-item">
+                                    <img src="IMG_953.png" alt=""></div>
+                                <p class="font-semibold"></p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-300">Sportivitas dan persahabatan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="gallery-item">
+                                    <img src="IMG_9630.png" alt=""></div>
+                                <p class="font-semibold"></p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-300">Kenangan indah turnamen</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-electric-blue hover:border-white glow-effect transition-all duration-300 transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="gallery-item">
+                                    <img src="Untitled.png" alt=""></div>
+                                <p class="font-semibold"></p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-300">Penutupan yang tak terlupakan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-xl text-gray-300 mb-6 ">Ikuti media sosial kami untuk update terbaru!</p>
+                    <button onclick="openInstagram()" class="bg-gradient-to-r from-yellow-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform glow-effect hover:scale-105">
+                        📱 @hepwetifutsalcompetition
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    HUBUNGI KAMI
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6">KONTAK PANITIA</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-electric-blue rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">👥</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Panitia HFC SMK Hepweti Ciamis</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">📱</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">WhatsApp</p>
+                                    <p class="text-electric-white">0812-2163-6632</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">📷</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Instagram</p>
+                                    <p class="text-electric-white">@hepwetifutsalcompetition</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">📧</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-electric-white">hepwetifutsalcup@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex flex-col space-y-4">
+                            <button onclick="contactWhatsApp()" class="bg-gradient-to-r hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform glow-effect hover:scale-105">
+                                💬 Chat WhatsApp
+                            </button>
+                            <button onclick="openInstagram()" class="bg-gradient-to-r text-white font-bold py-3 px-6 rounded-lg glow-effect transition-all duration-300 transform hover:scale-105">
+                                📱 Follow Instagram
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Sponsors -->
+                    <div class="bg-gray-800 rounded-lg p-8 border border-electric-blue glow-effect">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6">SPONSOR & PARTNER</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white glow-effect rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
+                                <div class="gallery-item">
+                                    <img src="aice.png" alt=""></div>
+                                <p class="font-semibold">________</p>
+                                <p class="text-sm text-gray-400">Ice Cream Partnership</p>
+                            </div>
+                            
+                            <div class="bg-white glow-effect rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
+                                <div class="gallery-item">
+                                    <img src="5.png" alt=""></div>
+                                <p class="font-semibold">________</p>
+                                <p class="text-sm text-gray-400">Internet Partnership</p>
+                            </div>
+                            
+                            <div class="bg-white glow-effect rounded-lg p-6 text-center border border-gray-600 hover:border-electric-blue transition-all duration-300">
+                                <div class="gallery-item">
+                                    <img src="6.png" alt=""></div>
+                                <p class="font-semibold">________</p>
+                                <p class="text-sm text-gray-400">Water Partnership</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 text-center">
+                            <p class="text-gray-400 mb-4">Tertarik menjadi sponsor?</p>
+                            <button onclick="contactWhatsApp()" class="bg-electric-blue hover:bg-blue-700 glow-effect text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">
+                                Hubungi Kami
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Meeting Section -->
+    <section id="Technical Meeting" class="hidden-section min-h-screen bg-gradient-to-br from-gray-900 to-black py-20">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="slide-in">
+                <h2 class="font-bebas text-5xl md:text-6xl text-center text-electric-white mb-12">
+                    Technical Meeting
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-br from-electric-blue to-blue-700 rounded-lg p-8 text-center">
+                        <h3 class="font-bebas text-3xl text-electric-blue mb-6">Persiapan Acara</h3>
+                            <p class="text-gray-400 mb-4">Technical Meeting ini diselenggarakan untuk
+                             mempersiapkan dan mengkoordinasikan seluruh aspek teknis dari acara 
+                             [Hepweti Futsal Competition] yang akan datang. Pertemuan ini bertujuan memastikan 
+                             semua pihak terkait memiliki pemahaman yang sama tentang pelaksanaan acara.</p>   
+                            <p class="text-gray-400 mb-4">Kami mengundang seluruh panitia, peserta,
+                            dan pihak terkait untuk hadir dalam pertemuan penting ini guna menyamakan 
+                            persepsi dan koordinasi teknis pelaksanaan acara.</p>
+                    
+    <!-- About Section2 -->
+    <section id="about2">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang Acara</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+   
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Tujuan</h4>
+                                <p>Koordinasi teknis dan persiapan acara untuk memastikan kelancaran pelaksanaan</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Waktu</h4>
+                                <p>10 Januari 2026, 08.00 - 15.00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Tempat</h4>
+                                <p>Kampus SMK Hepweti Ciamis</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Peserta</h4>
+                                <p>Panitia, peserta, dan pihak terkait</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    <div class="about-features ">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Tujuan</h4>
+                                <p>Koordinasi teknis dan persiapan acara untuk memastikan kelancaran pelaksanaan</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Waktu</h4>
+                                <p>10 Januari 2026, 08.00 - 15.00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Tempat</h4>
+                                <p>Kampus SMK Hepweti Ciamis</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="agenda-timeline feature-text">
+                                <h4>Peserta</h4>
+                                <p>Seluruh panitia, peserta, dan pihak terkait dalam acara</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+   <div class="agenda-timeline ">
+    <h2 class="section-title font-bebas text-3xl mb-6">Agenda Acara </h2>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      08:30 - 09:00
+     </div>
+     <div class="agenda-title">
+      Registrasi Peserta
+     </div>
+     <div class="agenda-desc">
+      Pendaftaran ulang dan pengambilan materi meeting
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      09:00 - 09:30
+     </div>
+     <div class="agenda-title">
+      Pembukaan &amp; Sambutan
+     </div>
+     <div class="agenda-desc">
+      Sambutan ketua panitia dan penjelasan tujuan technical meeting
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      09:30 - 11:00
+     </div>
+     <div class="agenda-title">
+      Pembahasan Teknis I
+     </div>
+     <div class="agenda-desc">
+      Review timeline acara, pembagian tugas, dan koordinasi antar divisi
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      11:00 - 11:15
+     </div>
+     <div class="agenda-title">
+      Coffee Break
+     </div>
+     <div class="agenda-desc">
+      Istirahat dan networking
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      11:15 - 12:45
+     </div>
+     <div class="agenda-title">
+      Pembahasan Teknis II
+     </div>
+     <div class="agenda-desc">
+      Detail teknis pelaksanaan, kebutuhan logistik, dan contingency plan
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      12:45 - 13:45
+     </div>
+     <div class="agenda-title">
+      Ishoma
+     </div>
+     <div class="agenda-desc">
+      Istirahat, sholat, dan makan siang
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      13:45 - 14:30
+     </div>
+     <div class="agenda-title">
+      Sesi Tanya Jawab
+     </div>
+     <div class="agenda-desc">
+      Diskusi terbuka dan klarifikasi tugas
+     </div>
+    </div>
+    <div class="agenda-item">
+     <div class="agenda-time">
+      14:30 - 15:00
+     </div>
+     <div class="agenda-title">
+      Penutupan
+     </div>
+     <div class="agenda-desc">
+      Kesimpulan, action items, dan foto bersama
+     </div>
+    </div>
+   </div>
+  </section>
+
+    <footer class="bg-black border-t border-electric-blue py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-8 h-8 bg-electric-blue rounded-full flex items-center justify-center">
+                    <img src="logohfc.png">
+                </div>
+                <span class="font-bebas text-xl text-electric-blue">HFC 2026</span>
+            </div>
+            <p class="text-gray-400 mb-2">© 2026 Hepweti Futsal Competition. All rights reserved.</p>
+            <p class="text-gray-500 text-sm">Diselenggarakan oleh SMK Hepweti Ciamis</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active-section');
+                section.classList.add('hidden-section');
+            });
+            
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            targetSection.classList.remove('hidden-section');
+            targetSection.classList.add('active-section');
+            
+            // Update navigation buttons
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const mobileNavButtons = document.querySelectorAll('.nav-btn-mobile');
+            
+            navButtons.forEach(btn => btn.classList.remove('nav-active'));
+            mobileNavButtons.forEach(btn => btn.classList.remove('nav-active'));
+            
+            // Add active class to current button
+            event.target.classList.add('nav-active');
+            
+            // Close mobile menu
+            document.getElementById('mobile-menu').classList.add('hidden');
+            
+            // Add slide-in animation
+            targetSection.querySelector('.slide-in').style.animation = 'none';
+            setTimeout(() => {
+                targetSection.querySelector('.slide-in').style.animation = 'slideIn 0.8s ease-out';
+            }, 10);
+        }
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Countdown timer
+        function updateCountdown() {
+            const targetDate = new Date('January 26, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('countdown').innerHTML = '<div class="text-2xl font-bold text-electric-blue">Turnamen Telah Dimulai!</div>';
             }
-            .ripple {
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.3);
-                transform: scale(0);
-                animation: ripple-animation 0.6s linear;
-                pointer-events: none;
-            }
-            @keyframes ripple-animation {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(rippleStyle);
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Contact functions
+        function contactWhatsApp() {
+            window.open('https://wa.me/6281221636632?text=Halo,%20saya%20ingin%20bertanya%20tentang%20HFC%202026', '_blank', 'noopener,noreferrer');
+        }
+        
+        function openInstagram() {
+            window.open('https://instagram.com/hepwetifutsalcompetition', '_blank', 'noopener,noreferrer');
+        }
+        
+        function openRegistrationForm() {
+            // In a real implementation, this would open a Google Form or registration page
+            alert('Formulir pendaftaran akan segera dibuka! Silakan hubungi panitia melalui WhatsApp untuk informasi lebih lanjut.');
+        }
+        
+        // Add smooth scrolling and animations on load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial animation for home section
+            const homeSection = document.getElementById('home');
+            const slideInElement = homeSection.querySelector('.slide-in');
+            slideInElement.style.animation = 'slideIn 0.8s ease-out';
+        });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99b72c4ff787b5b4',t:'MTc2MjYyNjk1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98cc288e5292fdc5',t:'MTc2MDE2MjY0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
